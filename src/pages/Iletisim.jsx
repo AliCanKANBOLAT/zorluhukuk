@@ -3,8 +3,8 @@ import React from 'react';
 const Iletisim = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-4 sm:p-8 flex flex-col items-center">
-      <div className="max-w-5xl w-full bg-white shadow-xl rounded-lg p-6">
-        <h1 className="text-3xl font-bold text-cyan-800 mb-6 text-center">İletişim</h1>
+      <div className="max-w-5xl w-full bg-white shadow-xl rounded-lg p-6 border border-indigo-950">
+        <h1 className="text-3xl font-bold bg-indigo-950 mb-6 text-center text-gray-300">İletişim</h1>
         
         {/* Google Maps */}
         <div className="mb-8">
@@ -20,10 +20,10 @@ const Iletisim = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-          <div className="mb-8 md:mb-0">
-            <h2 className="text-xl font-semibold text-cyan-800 mb-4">İletişim Bilgileri</h2>
-            <p className="text-gray-700">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between border border-indigo-950">
+          <div className="mb-8 md:mb-0 bg-gray-50 p-5 rounded shadow-xl">
+            <h2 className="text-xl font-semibold bg-indigo-950 mb-4 text-gray-300 px-3 text-center">İletişim Bilgileri</h2>
+            <p className="text-gray-700 text-center">
               Bayındır Mahallesi 322. Sokak <br />
               Çiftçioğlu Apartmanı Kat: 1 Daire: 5 <br />
               Muratpaşa/Antalya
@@ -32,13 +32,13 @@ const Iletisim = () => {
               <strong>Telefon:</strong> <a href="tel:+905057462404" className="text-cyan-600 hover:underline">+90 505 746 24 04</a>
             </p>
             <p className="text-gray-700">
-              <strong>Email:</strong> <a href="mailto:kariyer@sen.av.tr" className="text-cyan-600 hover:underline">avgamzezorlu@gmail.com</a>
+              <strong>Email:</strong> <a href="mailto:avgamzezorlu@gmail.com" className="text-cyan-600 hover:underline">avgamzezorlu@gmail.com</a>
             </p>
           </div>
 
           {/* Contact Actions */}
           <div className="w-full md:w-1/2 lg:w-1/3 bg-gray-50 p-4 shadow-lg rounded-lg">
-            <h2 className="text-xl font-semibold text-cyan-800 mb-4">Bize Ulaşın</h2>
+            <h2 className="text-xl font-semibold bg-indigo-950 mb-4 text-gray-300 rounded px-2 text-center">Bize Ulaşın</h2>
             <div className="space-y-4">
               <a
                 href="https://api.whatsapp.com/send?phone=+905057462404&text=ZorluHukuk için Randevu talebi: "

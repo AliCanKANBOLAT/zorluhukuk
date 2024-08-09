@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
 import ParallaxSection from '../components/Parallax';
-import scaleOfJustice from '../../public/scale_of_justice.svg';
+
 
 // Hizmetler dizisi
 const services = [
@@ -76,22 +76,24 @@ const Anasayfa = () => {
       <ParallaxSection />
 
       {/* Services Carousel */}
-      <div id="services" className="w-full bg-white p-6 sm:p-12 mt-12 rounded-lg shadow-lg relative overflow-hidden">
-        <h2 className="text-2xl font-bold text-cyan-800 mb-6 text-center">
-          Hizmetlerimiz
+      <div id="services" className="w-full bg-white p-24 sm:p-12 mt-12 rounded-lg shadow-lg relative overflow-hidden">
+        <h2 className="text-2xl font-bold bg-indigo-950 mb-6 text-gray-300 text-center">
+          Faaliyet Alanlarımız
         </h2>
         <Slider ref={sliderRef} {...carouselSettings}>
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+              className="flex flex-col items-center bg-gray-50 text-gray-300 p-6 rounded-xl
+               hover:shadow-xl transition-shadow duration-300 
+               transform hover:scale-105"
               style={{ height: '300px' }}
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(0,0,0,0.3)" }}
               initial={{ opacity: 0, scale: 0.8 }} 
               animate={{ opacity: 1, scale: 1 }} 
               transition={{ duration: 0.4 }} 
             >
-              <h3 className="text-xl font-semibold text-cyan-800 mb-4">{service.title}</h3>
+              <h3 className="text-xl font-semibold bg-indigo-950 mb-4">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
@@ -134,7 +136,7 @@ const Anasayfa = () => {
           animate={{ opacity: 1, y: 0 }}  
           transition={{ duration: 1 }}    
         >
-          <h2 className="text-2xl font-bold text-cyan-800 mb-6">
+          <h2 className="text-2xl font-bold bg-indigo-950 mb-6">
             Bize Ulaşın
           </h2>
           <p className="text-lg text-gray-700 mb-6">

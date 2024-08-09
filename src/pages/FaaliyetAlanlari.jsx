@@ -79,24 +79,24 @@ const services = [
   }
 ];
 
-const Hizmetlerimiz = () => {
+const FaaliyetAlanlari = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
     <div className="min-h-screen bg-gray-100 py-12">
       <div className="container mx-auto px-4 md:px-8">
-        <h1 className="text-4xl font-bold text-cyan-800 mb-12 text-center">Hizmetlerimiz</h1>
+        <h1 className="text-4xl font-bold bg-indigo-950  text-gray-300 mb-12 text-center">Faaliyet Alanlarımız</h1>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {services.map(service => (
             <motion.div 
               key={service.id} 
               layoutId={service.id} 
-              className="bg-white p-6 rounded-lg shadow-lg cursor-pointer"
+              className="bg-white text-gray-300 p-6 rounded-lg shadow-lg cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => setSelectedId(service.id)}
             >
-              <motion.h2 className="text-xl font-semibold text-cyan-800">{service.name}</motion.h2>
+              <motion.h2 className="text-xl font-semibold p-6 hover:bg-indigo-900 bg-indigo-950">{service.name}</motion.h2>
             </motion.div>
           ))}
         </div>
@@ -105,7 +105,7 @@ const Hizmetlerimiz = () => {
           {selectedId && (
             <motion.div 
               layoutId={selectedId} 
-              className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50"
+              className="fixed inset-0 bg-gray-800  bg-opacity-75 flex items-center justify-center z-50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -122,8 +122,8 @@ const Hizmetlerimiz = () => {
                 >
                   ✖
                 </button>
-                <motion.h2 className="text-xl font-semibold text-cyan-800">{services.find(service => service.id === selectedId).name}</motion.h2>
-                <p className="mt-4">{services.find(service => service.id === selectedId).description}</p>
+                <motion.h2 className="text-xl font-semibold text-gray-300 rounded text-center bg-indigo-950">{services.find(service => service.id === selectedId).name}</motion.h2>
+                <p className="mt-4 text-center">{services.find(service => service.id === selectedId).description}</p>
               </motion.div>
             </motion.div>
           )}
@@ -133,4 +133,4 @@ const Hizmetlerimiz = () => {
   );
 };
 
-export default Hizmetlerimiz;
+export default FaaliyetAlanlari;

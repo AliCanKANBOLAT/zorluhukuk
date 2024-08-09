@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import scaleOfJustice from '../../public/scale_of_justice.svg';
+
 
 const ParallaxSection = () => {
   const controls = useAnimation();
@@ -10,7 +10,6 @@ const ParallaxSection = () => {
     const scrollPosition = window.scrollY;
     const sectionPosition = document.getElementById('services')?.offsetTop || 0;
 
-    // Ekranın biraz üzerinde görünmesi için ayar yapıyoruz
     if (scrollPosition >= sectionPosition - window.innerHeight / 1.2) {
       setIsVisible(true);
     } else {
@@ -32,7 +31,7 @@ const ParallaxSection = () => {
       <motion.div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${scaleOfJustice})`,
+          backgroundImage: `url('/scale_of_justice.svg')`, // Corrected URL
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -45,7 +44,7 @@ const ParallaxSection = () => {
       ></motion.div>
       <div className="relative z-10 p-4 text-center">
         <motion.h1
-          className="text-4xl font-bold text-cyan-800 mb-6"
+          className="text-4xl text-gray-300 font-bold rounded-xl bg-indigo-950 mb-6"
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
           transition={{ duration: 1 }}
@@ -53,7 +52,7 @@ const ParallaxSection = () => {
           Hoşgeldiniz
         </motion.h1>
         <motion.p
-          className="text-lg text-cyan-800 mb-8"
+          className="text-lg text-gray-300 bg-indigo-950 mb-8 p-5 rounded-xl"
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
           transition={{ duration: 1 }}
@@ -62,9 +61,9 @@ const ParallaxSection = () => {
         </motion.p>
         <a
           href="#services"
-          className="py-3 px-6 bg-cyan-800 text-white font-semibold rounded-md shadow-md hover:bg-cyan-900 transition-colors duration-300"
+          className="py-3 px-6 bg-indigo-950 text-white font-semibold rounded-md shadow-md hover:bg-cyan-900 transition-colors duration-300"
         >
-          Hizmetlerimizi Keşfedin
+          Faaliyet Alanlarımızı Keşfedin
         </a>
       </div>
     </div>

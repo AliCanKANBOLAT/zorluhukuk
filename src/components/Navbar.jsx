@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import flag from '../assets/flag.svg';
 import { FaTimes, FaBars } from 'react-icons/fa';
+import zorluhukuk from "../../public/zorlulogo.svg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,17 +15,17 @@ const Navbar = () => {
 
   const getNavLinkClass = ({ isActive }) =>
     `block py-2 px-4 rounded-lg transition duration-300 ${
-      isActive ? 'bg-cyan-700 text-white' : 'hover:bg-cyan-700 hover:text-white'
+      isActive ? 'bg-indigo-900 text-white' : 'hover:bg-cyan-700 hover:text-white'
     }`;
 
   return (
     <>
-      <nav className="bg-cyan-800 text-white shadow-lg relative z-50">
+      <nav className="bg-indigo-950 text-white shadow-lg relative z-50">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex shadow-xl shadow-white border border-black rounded-xl p-1 items-center lg:space-x-6">
-            <NavLink to="/" className="text-2xl font-bold hover:text-gray-300 transition duration-300">
-              Zorlu Hukuk
+          <div className="flex shadow-xl bg-slate-400 rounded-xl items-center lg:space-x-6">
+            <NavLink to="/" className="w-32 h-24 rounded-xl mb-3">
+              <img src={zorluhukuk} alt="" />
             </NavLink>
           </div>
 
@@ -41,11 +42,9 @@ const Navbar = () => {
           <div className="hidden lg:flex lg:items-center lg:space-x-6">
             <NavLink to="/" className={getNavLinkClass} onClick={handleMenuItemClick}>ANA SAYFA</NavLink>
             <NavLink to="/hakkimizda" className={getNavLinkClass} onClick={handleMenuItemClick}>HAKKIMIZDA</NavLink>
-            <NavLink to="/ekibimiz" className={getNavLinkClass} onClick={handleMenuItemClick}>EKİBİMİZ</NavLink>
-            <NavLink to="/hizmetlerimiz" className={getNavLinkClass} onClick={handleMenuItemClick}>HİZMETLERİMİZ</NavLink>
+            <NavLink to="/faaliyetalanlari" className={getNavLinkClass} onClick={handleMenuItemClick}>FAALİYET ALANLARIMIZ</NavLink>
             <NavLink to="/blog" className={getNavLinkClass} onClick={handleMenuItemClick}>BLOG</NavLink>
             <NavLink to="/bulten" className={getNavLinkClass} onClick={handleMenuItemClick}>BÜLTEN</NavLink>
-            <NavLink to="/kariyer" className={getNavLinkClass} onClick={handleMenuItemClick}>KARİYER</NavLink>
             <NavLink to="/iletisim" className={getNavLinkClass} onClick={handleMenuItemClick}>İLETİŞİM</NavLink>
             </div>
             
@@ -70,7 +69,7 @@ const Navbar = () => {
             <NavLink to="/" className={getNavLinkClass} onClick={handleMenuItemClick}>ANA SAYFA</NavLink>
             <NavLink to="/hakkimizda" className={getNavLinkClass} onClick={handleMenuItemClick}>HAKKIMIZDA</NavLink>
             <NavLink to="/ekibimiz" className={getNavLinkClass} onClick={handleMenuItemClick}>EKİBİMİZ</NavLink>
-            <NavLink to="/hizmetlerimiz" className={getNavLinkClass} onClick={handleMenuItemClick}>HİZMETLERİMİZ</NavLink>
+            <NavLink to="/faaliyetalanlari" className={getNavLinkClass} onClick={handleMenuItemClick}>HİZMETLERİMİZ</NavLink>
             <NavLink to="/blog" className={getNavLinkClass} onClick={handleMenuItemClick}>BLOG</NavLink>
             <NavLink to="/bulten" className={getNavLinkClass} onClick={handleMenuItemClick}>BÜLTEN</NavLink>
             <NavLink to="/kariyer" className={getNavLinkClass} onClick={handleMenuItemClick}>KARİYER</NavLink>

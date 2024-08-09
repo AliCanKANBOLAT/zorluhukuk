@@ -28,17 +28,17 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="container mx-auto px-4 md:px-8">
-        <h1 className="text-4xl font-bold text-cyan-800 mb-6 text-center">Blog</h1>
-        <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-1">
+        <h1 className="text-4xl font-bold bg-indigo-950 mb-6 text-gray-300 text-center">Blog</h1>
+        <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-1 text-gray-300">
           {blogPosts.map((post) => (
             <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-cyan-800 mb-4">{post.title}</h2>
+                <h2 className="text-2xl font-bold bg-indigo-950 mb-4 p-1">{post.title}</h2>
                 <p className="text-gray-600 mb-4">{post.summary}</p>
                 <a
                   href={post.link}
-                  className="text-cyan-800 font-semibold hover:underline"
+                  className="bg-indigo-950 p-1 rounded shadow-lg font-semibold hover:underline"
                 >
                   Devamını Oku
                 </a>
